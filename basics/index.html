@@ -2,54 +2,207 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <title></title>
+  <title>CSS Grid</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
   <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #ffffff;
+    }
+
+    p, li {
+      font-family: 'PT Serif', serif;
+    }
+
     .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .content-wrapper {
+      width: 660px;
+    }
+
+    .style-details {
+      margin-top: 75px;
+      margin-bottom: 75px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-      grid-auto-rows: minmax(100px, auto);
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
     }
-    .one {
-      grid-column: 1 / 3;
-      grid-row: 1;
-      background-color:aliceblue;
+
+    .style-details-text {
+      text-align: right;
     }
-    .two { 
-      grid-column: 2 / 4;
-      grid-row: 1 / 3;
-      background-color:aqua;
+
+    .style-details-text div {
+      color: #808080;
+      font-weight: normal;
     }
-    .three {
-      grid-column: 1;
-      grid-row: 2 / 5;
-      background-color:blue;
+
+    .style-details-text h3 {
+      margin-top: 30px;
     }
-    .four {
-      grid-column: 3;
-      grid-row: 3;
-      background-color:blueviolet;
+
+    .style-details-logo img {
+      width: 100%;
     }
-    .five {
-      grid-column: 2;
-      grid-row: 4;
-      background-color:chocolate;
+
+    .dos_donts_wrapper {
+      margin-top: 75px;
+      margin-bottom: 75px;
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      grid-gap: 30px;
     }
-    .six {
-      grid-column: 3;
-      grid-row: 4;
-      background-color:cornflowerblue;
+
+    .dont_image_box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .dos_donts_heading {
+      font-weight: 900;
+      margin-bottom: 20px;
+      margin-left: 40px;
+    }
+
+    .blue_text {
+      color: #0079FF;
+    }
+
+    .red_text {
+      color: #DC0004;
+    }
+
+    .dont_image_box img {
+      width: 50%;
+    }
+
+    .dont_image_box div {
+      color: #999999;
+      font-size: 14px;
+    }
+
+    .dos_donts_list li {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .alternate_options_wrapper {
+      margin-top: 75px;
+      margin-bottom: 75px;
+    }
+
+    .alternate_options_wrapper h3 {
+      color: #999999;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .alternate_options_wrapper li {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 19px;
+    }
+
+    .alternate_logo_images {
+      display: grid;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="one">One</div>
-    <div class="two">Two</div>
-    <div class="three">Three</div>
-    <div class="four">Four</div>
-    <div class="five">Five</div>
-    <div class="six">Six</div>
+    <div class="content-wrapper">
+      <h2>Branding Guidelines</h2>
+      <p>Welcome to the DailySmarty branding guidelines! We’re happy that you see the worth of our product and understand the value in promoting it correctly.</p>
+
+      <p>The folowing guides have been provided to assist you in maintaining the integrity and intedended useage of our logo and branding in your marketing materials.  Keeping with these guidelines will reinforce both your and our professionalism and legitimacy in the eyes of the audience.</p>
+
+      <p>Thank you again for your interest and relationship with DailySmarty. Please see the guidelines outlined below (logo assets can be downloaded below):</p>
+
+      <div class="style-details">
+        <div class="style-details-text">
+          <h3>Primary Logo</h3>
+          <div>White Space = 1/4 logo width</div>
+          <div>White logo on primary blue</div>
+
+          <h3>Primary Color</h3>
+          <div>#0079FF</div>
+          <div>RGB 0, 121, 255</div>
+
+          <h3>Name</h3>
+          <div>Capitalize “D” and “S”</div>
+          <div>No space between the words</div>
+        </div>
+
+        <div class="style-details-logo">
+          <img src="images/logo-with-margin.png">
+        </div>
+      </div>
+
+      <div class="dos_donts_wrapper">
+        <div class="dos_donts_list">
+          <div class="dos_donts_heading blue_text">
+            Logo Do’s
+          </div>
+
+          <ul>
+            <li>Provide adequate white space surrounding the logo.</li>
+            <li>Icon must always be white</li>
+            <li>Keep a large size so the icon doesn’t get obscured.</li>
+            <li>Place logo on white or light background colors</li>
+          </ul>
+        </div>
+
+        <div class="dos_donts_list">
+          <div class="dos_donts_heading red_text">
+            Logo Dont’s
+          </div>
+
+          <ul>
+            <li>Strech or scale the logo non-uniformely</li>
+            <li>Crop or partially cover the logo with other objects</li>
+            <li>Alter the logo or wordmark color to anything other than our primary color</li>
+          </ul>
+        </div>
+
+        <div class="donts_images">
+          <div class="dont_image_box">
+            <img src="images/dont_stretch.png">
+            <div>Stretch</div>
+          </div>
+
+          <div class="dont_image_box">
+            <img src="images/dont_crop.png">
+            <div>Crop</div>
+          </div>
+
+          <div class="dont_image_box">
+            <img src="images/dont_color.png">
+            <div>Color</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alternate_options_wrapper">
+        <h3>Alternate Options</h3>
+
+        <ul>
+          <li>The circular badge can be used separately from the wordmark.</li>
+          <li>The icon may be extracted from the logo and applied separately - but it must remain white and have a background of our primary blue color.</li>
+          <li>The wordmark may be used separately from the circular badge.</li>
+          <li>Logo Do’s and Do Not’s above still apply.</li>
+        </ul>
+
+        <div class="alternate_logo_images">
+        </div>
+      </div>
+
+    </div>
   </div>
 </body>
 </html>
