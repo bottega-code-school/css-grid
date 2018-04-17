@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <meta charset='UTF-8'>
   <title>CSS Grid</title>
@@ -12,7 +13,8 @@
       background-color: #ffffff;
     }
 
-    p, li {
+    p,
+    li {
       font-family: 'PT Serif', serif;
     }
 
@@ -110,19 +112,66 @@
     }
 
     .alternate_logo_images {
+      margin-top: 80px;
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      grid-gap: 100px 40px;
+    }
+
+    .image_logos {
+      width: 60%;
+    }
+
+    .text_logos {
+      width: 90%;
+    }
+
+    .additional_branding_details {
+      margin-top: 75px;
+      margin-bottom: 75px;
+    }
+
+    .additional_branding_details a {
+      color: #4FB8E8;
+      font-size: 19px;
+    }
+
+    .additional_branding_details p {
+      margin-bottom: 42px;
+    }
+
+    @media (max-width: 48em) {
+      .style-details {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
+
+      .style-details-text {
+        text-align: center;
+      }
+
+      .dos_donts_wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="content-wrapper">
       <h2>Branding Guidelines</h2>
-      <p>Welcome to the DailySmarty branding guidelines! We’re happy that you see the worth of our product and understand the value in promoting it correctly.</p>
+      <p>Welcome to the DailySmarty branding guidelines! We’re happy that you see the worth of our product and understand the
+        value in promoting it correctly.</p>
 
-      <p>The folowing guides have been provided to assist you in maintaining the integrity and intedended useage of our logo and branding in your marketing materials.  Keeping with these guidelines will reinforce both your and our professionalism and legitimacy in the eyes of the audience.</p>
+      <p>The folowing guides have been provided to assist you in maintaining the integrity and intedended useage of our logo
+        and branding in your marketing materials. Keeping with these guidelines will reinforce both your and our professionalism
+        and legitimacy in the eyes of the audience.</p>
 
-      <p>Thank you again for your interest and relationship with DailySmarty. Please see the guidelines outlined below (logo assets can be downloaded below):</p>
+      <p>Thank you again for your interest and relationship with DailySmarty. Please see the guidelines outlined below (logo
+        assets can be downloaded below):</p>
 
       <div class="style-details">
         <div class="style-details-text">
@@ -193,16 +242,35 @@
 
         <ul>
           <li>The circular badge can be used separately from the wordmark.</li>
-          <li>The icon may be extracted from the logo and applied separately - but it must remain white and have a background of our primary blue color.</li>
+          <li>The icon may be extracted from the logo and applied separately - but it must remain white and have a background
+            of our primary blue color.</li>
           <li>The wordmark may be used separately from the circular badge.</li>
           <li>Logo Do’s and Do Not’s above still apply.</li>
         </ul>
 
         <div class="alternate_logo_images">
+          <img class="image_logos" src="images/ds_circle_logo.png">
+          <img class="image_logos" src="images/ds_square_logo.png">
+          <img class="text_logos" src="images/ds_icon_text_logo.png">
+          <img class="text_logos" src="images/ds_text_logo.png">
         </div>
+      </div>
+
+      <div class="additional_branding_details">
+        <h3>Asset Download</h3>
+        <p>
+          <a href="#">Download .zip file.</a>
+        </p>
+
+        <h3>Usage</h3>
+        <p>
+          Please remember to adhere to the above guidlines when referencing and using our logos. If you are unsure of the correct protocol
+          for a particular usecase, feel free to ask us at the following email: support@dailysmarty.com.
+        </p>
       </div>
 
     </div>
   </div>
 </body>
+
 </html>
