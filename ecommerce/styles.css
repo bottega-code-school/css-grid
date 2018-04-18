@@ -1,0 +1,27 @@
+body {
+  margin: 0px;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.homepage-hero {
+  background: url("images/sticker-bg.jpg") no-repeat;
+  background-size: 100vw;
+  filter: brightness(50%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__link {
+  margin-right: 15px;
+  margin-left: 15px;
+}
