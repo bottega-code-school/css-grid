@@ -1,3 +1,5 @@
+/* Common */
+
 body {
   margin: 0px;
   font-family: "Lato", sans-serif;
@@ -10,18 +12,6 @@ body {
   height: 100vh;
 }
 
-.homepage-hero {
-  background-image: url("images/home-bg.jpg");
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center top;
-  color: #666;
-  margin-top: 0em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -29,6 +19,7 @@ body {
   height: 50px;
   background-color: #333333;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #333333;
 }
 
 .navbar__link {
@@ -37,6 +28,15 @@ body {
   color: #e6e6e6;
   text-decoration: none;
   font-size: 18px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar__link:hover {
+  border-bottom: 3px solid #00cb79;
 }
 
 .navbar__link--active {
@@ -106,6 +106,21 @@ body {
   color: #333333;
   text-decoration: none;
 }
+/* Homepage */
+
+.homepage-hero {
+  background-image: url("images/home-bg.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #666;
+  margin-top: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
 
 @media (max-width: 80em) {
   .page-content-container {
