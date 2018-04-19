@@ -33,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   border-bottom: 3px solid transparent;
+  transition: border-bottom 0.5s ease;
 }
 
 .navbar__link:hover {
