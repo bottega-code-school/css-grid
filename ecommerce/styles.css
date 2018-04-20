@@ -105,7 +105,6 @@ body {
 .product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
   margin-top: 50px;
 }
 
@@ -165,7 +164,6 @@ body {
 
 .product-details-add-to-cart-button button {
   height: 40px;
-  width: 97px;
   border-radius: 20px;
   background-color: #00cb79;
   border: 0px;
