@@ -111,6 +111,14 @@ body {
 
 .product-list-item {
   text-align: center;
+  padding: 10px;
+  transition: box-shadow 0.5s ease;
+}
+
+.product-list-item:hover {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 .product-list-item img {
