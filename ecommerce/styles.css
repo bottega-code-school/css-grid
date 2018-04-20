@@ -352,12 +352,13 @@ body {
 
 .active-checkout-btn-wrapper button {
   height: 38px;
-  width: 183px;
   border-radius: 20px;
   background-color: #00cb79;
   color: #ffffff;
   font-size: 18px;
   border: 0px solid transparent;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .active-checkout-btn-wrapper button:focus {
