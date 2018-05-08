@@ -11,33 +11,66 @@
   <style>
     html {
       font-family: 'Lato', sans-serif;
+      box-sizing: border-box;
+      font-size: 62.5%; /* why I use rem / rem explanation: 10/16px = 62.5% -> 1rem = 10px; */ 
+    }
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
     }
 
     .container {
       display: grid;
-      grid-template-columns: 1fr;
+
+      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: 1fr 1fr 1fr;
+      
       margin-top: 5em;
       justify-items: center;
+      align-items: center;
+      
+      height: 100vh;
+
+
+    }
+
+    body {
+      overflow: hidden;
     }
 
     .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      grid-column: 2;
+      grid-row: 1;
 
-    .logo img {
-      width: 105px;
+
     }
 
     .search-bar {
-      margin-top: 10em;
-      margin-bottom: 15em;
+      grid-column: 1/-1;
+      grid-row: 2;
+
     }
 
+  
+    .recent-posts {
+      grid-column: 1/-1;
+      grid-row: 3;
+
+    }
+
+
+    .logo img {
+      width: 10.5rem;;
+    }
+
+
     .search-bar input {
-      width: 942px;
-      height: 118px;
+      width: 66vw;
+      height: 11.8rem;
       padding-left: 0.75em;
     }
 
@@ -50,7 +83,7 @@
       -moz-box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
       box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
       border: 0px solid transparent;
-      border-radius: 5px;
+      border-radius: .5rem;
     }
 
     .search-bar input[type=text]::placeholder {
@@ -67,34 +100,36 @@
     }
 
     .search-bar p {
+      color: #B3B3B3;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-top: 2.3rem;
       text-align: right;
-      color: #A4A4A4;
-      margin-top: 25px;
-      font-size: 0.85em;
     }
 
-    .recent-posts {
-      width: 942px;
-    }
 
-    .recent-post-heading {
+    .recent-posts-heading {
       color: #2660F3;
-      margin-bottom: 30px;
-      font-size: 0.8em;
+      margin-bottom: 3rem;
+      font-size: 1.4rem;
     }
 
-    .recent-post-wrapper {
+    .recent-posts-wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      width: 66vw;
+      grid-gap: 2.5rem;
     }
 
-    .title {
+    .recent-post-title {
       color: #535353;
+      font-size: 1.4rem;
     }
 
     .recent-post-category {
-      color: #878787;
+      color: #999999;
+      font-size: 1.2rem;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -111,13 +146,13 @@
     </div>
 
     <div class="recent-posts">
-      <div class="recent-post-heading">
+      <div class="recent-posts-heading">
         Recent Posts
       </div>
 
-      <div class="recent-post-wrapper">
-        <div class="post">
-          <div class="title">
+      <div class="recent-posts-wrapper">
+        <div class="recent-post">
+          <div class="recent-post-title">
             Guide to rendering points on a Google Map
           </div>
 
@@ -125,8 +160,8 @@
             JavaScript
           </div>
         </div>
-        <div class="post">
-          <div class="title">
+        <div class="recent-post">
+          <div class="recent-post-title">
             Guide to rendering points on a Google Map
           </div>
 
@@ -134,8 +169,8 @@
             JavaScript
           </div>
         </div>
-        <div class="post">
-          <div class="title">
+        <div class="recent-post">
+          <div class="recent-post-title">
             Guide to rendering points on a Google Map
           </div>
 
