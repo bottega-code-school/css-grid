@@ -21,27 +21,26 @@ html {
     /* height: 100vh; */
   }
 
-
 .header-hero {
     grid-column: 1/-1;
     grid-row: 1;
-
-    background-image: url("images/home-bg.jpg");
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center top;
     
     color: #666;
 
     display: grid;
     justify-content: center;
     align-items: center;
-    
-
-
 }
 
-.header-hero img {
+
+.header-hero-background {
+    background-image: url("images/home-bg.jpg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.header-hero-background img {
     /* width: 20em; */
 
     /* height: 21.4rem;
@@ -152,8 +151,6 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); /*220px product width = 22rem*/
     grid-template-rows: repeat(auto-fill, 31.2rem); /*220px + 92px gap = 31.2rem*/
 
-
-
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -170,7 +167,8 @@ html {
     grid-gap: 2.2rem;
     justify-items: center;
     align-items: center;
- 
+
+    grid-template-rows: 1fr 23px;
 }   
 
 .store__product img {
@@ -186,7 +184,6 @@ html {
     line-height: 23px;
     text-align: center;
 
-    
 
 
 }
