@@ -106,7 +106,10 @@
     width: 97px;
     border-radius: 20px;
     background-color: #00CB79;
+    
 
+}
+.store__product-add-to-cart a {
 
     color: #FFFFFF;
     font-family: "Open Sans";
@@ -114,7 +117,8 @@
     font-weight: 600;
     line-height: 14px;
     text-align: center;
-}
+    text-decoration-color: transparent;
+ }
 
 /* center a tags within these elements */
 .store__product-amount-box,
