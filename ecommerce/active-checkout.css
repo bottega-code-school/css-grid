@@ -6,10 +6,13 @@
 
 .product-plus,
 .product-minus,
-.product__amount-box {
+.product__amount-box,
+.cart__footer-checkout,
+.cart__footer-subtotal,
+.cart__footer-total { 
     display: grid;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 }
 
 .cart__title {
@@ -63,7 +66,7 @@
     /* grid for body */
     display: grid;
     grid-template-rows: [title-s] .2fr [title-e products-s] 1fr [products-e footer-s] .3fr [footer-e];
-    grid-template-columns: .1fr [body-s] 1fr [body-e] .1fr;
+    grid-template-columns:.1fr [body-s] 1fr [body-e] .1fr;
 
     grid-gap: 2.4rem;
 }
@@ -188,24 +191,57 @@
 
 
 
-.cart__footer {
-    background-color: slateblue;
+.cart__footer { 
     /* position footer on body grid */
+
     grid-row: footer-s/footer-e;
-    grid-column: body-s/body-e;
+    grid-column: 1/-1;
+        /* 1/-1 bc we need the footer to extend the whole bottom of the grid bc black background */
+
+    background-color: #1A1A1A;
+    align-items: center;
+
+    /* setup grid for footer */
+    display: grid;
+    grid-template-columns: minmax(5px, 50px) [checkout-s] 1fr [checkout-e subtotal-s] 1fr [subtotal-e total-s] 46px minmax(5px, 30px)
+
 }
 
-.cart__footer {
-
-}
 .cart__footer-checkout {
+    grid-column: checkout-s/checkout-e;
 
+    height: 38px;
+    width: 183px;
+    border-radius: 20px;
+    background-color: #00CB79;
+
+
+
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 14px;
+    text-align: center;
 }
+
 
 .cart__footer-subtotal {
+    grid-column: subtotal-s/subtotal-e;
+    justify-self: right;
 
+    color: #808080;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .cart__footer-total {
+    grid-column: total-s/total-e;
 
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
 }
