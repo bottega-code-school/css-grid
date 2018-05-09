@@ -2,3 +2,87 @@
     font-family: "Font Awesome\ 5 Free", 'Lato', 'Open Sans', sans-serif;
     font-weight: 600;
 }
+
+/*  */
+/*  */
+
+.cart {
+    display: grid;
+    grid-template-rows: [toggle-s] 40px [toggle-e body-s] 1fr [body-e];
+    grid-template-columns: [grid-s] 1fr [grid-e toggle-s] 76px [toggle-e];
+}
+
+.cart__toggle {
+    /* end of grid */
+    grid-row: toggle-s/toggle-e;
+    grid-column: toggle-s/toggle-e;
+
+    /* appearance */
+    height: 40px;
+    width: 76px;
+    border-radius: 25px 0 0 25px;
+    background-color: #333333;
+
+    /* X icon placement and appearance */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.cart__body {
+    
+}
+
+.cart__title {
+
+}
+
+.cart__content {
+
+}
+
+.product {
+
+}
+
+.product__icon {
+
+}
+
+.product__title {
+
+}
+
+.product__amount-box {
+
+}
+.product-plus {
+
+}
+.product-minus {
+
+}
+.product-price {
+
+}
+
+.cart__footer {
+
+}
+
+.cart__footer {
+
+}
+.cart__footer-checkout {
+
+}
+
+.cart__footer-subtotal {
+
+}
+
+.cart__footer-total {
+
+}
