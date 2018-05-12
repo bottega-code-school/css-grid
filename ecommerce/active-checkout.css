@@ -1,0 +1,247 @@
+.fa {
+    font-family: "Font Awesome\ 5 Free", 'Lato', 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+
+.product-plus,
+.product-minus,
+.product__amount-box,
+.cart__footer-checkout,
+.cart__footer-subtotal,
+.cart__footer-total { 
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.cart__title {
+    display: grid;
+    align-items: center;
+}
+/*  */
+/*  */
+
+.cart {
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 130px;
+
+    display: grid;
+    grid-template-rows: [toggle-s] 40px [toggle-e gap-s] 15px [gap-e body-s] 1fr [body-e];
+    grid-template-columns: [grid-s] 1fr [toggle-s] 76px [toggle-e grid-e];
+
+    height: 730px;
+    width: 520px;
+
+}
+
+.cart__toggle {
+    /* end of grid */
+    grid-row: toggle-s/toggle-e;
+    grid-column: toggle-s/toggle-e;
+
+    /* appearance */
+    height: 40px;
+    width: 76px;
+    border-radius: 25px 0 0 25px;
+    background-color: #333333;
+
+    /* X icon placement and appearance */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.cart__body {
+    grid-row: body-s/body-e;
+    grid-column: grid-s/grid-e;
+
+    background-color: #333333;
+    box-shadow: -3px 20px 20px 0 rgba(0,0,0,0.2);
+
+    /* grid for body */
+    display: grid;
+    grid-template-rows: [title-s] .2fr [title-e products-s] 1fr [products-e footer-s] .3fr [footer-e];
+    grid-template-columns:.1fr [body-s] 1fr [body-e] .1fr;
+
+    grid-gap: 2.4rem;
+}
+
+.cart__title {
+
+    color: #E6E6E6;
+    font-family: 'Titillium Web';
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+
+    /* position title on body grid */
+    grid-row: title-s/title-e;
+    grid-column: body-s/body-e;
+}
+
+.cart__products {
+    /* position products on body grid */
+    grid-row: products-s/products-e;
+    grid-column: body-s/body-e;
+
+    /* scroll */
+    overflow-y: auto;
+    height: 480px;
+    width: 460px;
+}
+
+.products {
+    /* setup grid for products within products portion of body grid */
+    /* nested 'products' div to allow overflow scroll */
+    display: grid;
+    grid-row-gap: 4.5rem;
+}
+
+.product {
+    height: 130px;
+    /* background: rgb(72, 255, 185); */
+
+    display: grid;
+    grid-template-columns: [icon-s] 130px [icon-e space-one-s] 35px [space-one-e box-s] 65px [box-e plus-minus-s] 29px [plus-minus-e space-s] 20px [space-e remove-s] 1fr [remove-e price-s] 1fr [price-e];
+    grid-template-rows: [grid-s] 1fr [title-e plus-s] 20px [plus-e minus-s] 20px [minus-e grid-e];
+}
+
+.product__icon {
+    grid-row: grid-s/grid-e;
+    grid-column: icon-s/icon-e;
+}
+
+.product__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product__title {
+    grid-row: grid-s/title-e;
+    grid-column: box-s/price-s;
+
+    color: #E6E6E6;
+    font-family: 'Titillium Web';
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.product__amount-box {
+    grid-row: plus-s/minus-e;
+    grid-column: box-s/box-e;
+
+    box-sizing: border-box;
+    height: 40px;
+    width: 65px;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px 0 0 3px;
+
+    font-size: 2rem;
+}
+.product-plus {
+    grid-column: plus-minus-s/plus-minus-e;
+    grid-row: plus-s/plus-e;
+
+    box-sizing: border-box;
+    height: 20px;
+    width: 29px;
+    border: 1px solid #E6E6E6;
+    border-radius: 0 3px 0 0;
+}
+
+.product-minus {
+    grid-column: plus-minus-s/plus-minus-e;
+    grid-row: minus-s/minus-e;
+
+    box-sizing: border-box;
+    height: 20px;
+    width: 29px;
+    border: 1px solid #E6E6E6;
+    border-radius: 0 0 3px 0;
+}
+
+.product-remove {
+    grid-column: remove-s/remove-e;
+    grid-row: minus-s/grid-e;
+
+    color: #808080;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.product-price {
+    grid-column: price-s/price-e;
+    grid-row: minus-s/grid-e;
+
+    color: #00E993;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+
+
+
+
+.cart__footer { 
+    /* position footer on body grid */
+
+    grid-row: footer-s/footer-e;
+    grid-column: 1/-1;
+        /* 1/-1 bc we need the footer to extend the whole bottom of the grid bc black background */
+
+    background-color: #1A1A1A;
+    align-items: center;
+
+    /* setup grid for footer */
+    display: grid;
+    grid-template-columns: minmax(5px, 50px) [checkout-s] 1fr [checkout-e subtotal-s] 1fr [subtotal-e total-s] 46px minmax(5px, 30px)
+
+}
+
+.cart__footer-checkout {
+    grid-column: checkout-s/checkout-e;
+
+    height: 38px;
+    width: 183px;
+    border-radius: 20px;
+    background-color: #00CB79;
+
+
+
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 14px;
+    text-align: center;
+}
+
+
+.cart__footer-subtotal {
+    grid-column: subtotal-s/subtotal-e;
+    justify-self: right;
+
+    color: #808080;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.cart__footer-total {
+    grid-column: total-s/total-e;
+
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
+}
